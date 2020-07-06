@@ -1,0 +1,28 @@
+<section (mousemove)="activateFooter()">
+    <div class="display">
+
+    </div>
+    <div class="footer-options" [ngClass]="isFooterActive? 'active' : ''">
+        <div class="wrapper">
+            <div class="left">
+                <button>Meeting details <i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+            </div>
+            <div class="middle">
+                <button class="mute"><i class="fa fa-microphone-slash" aria-hidden="true"></i></button>
+                <button class="end"><i class="fas fa-phone"></i></button>
+                <button class="video"><i class="fas fa-video    "></i></button>
+            </div>
+            <div class="right">
+                <button class="captions">
+                    <i class="fas fa-closed-captioning cc"></i>
+                    <h1>Turn on captions</h1>
+                </button>
+                <button>
+                    <i class="fa fa-arrow-up present-now" aria-hidden="true"></i>
+                    <h1>Present now</h1>
+                </button>
+                <i class="fa fa-ellipsis-v three-dots" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</section>

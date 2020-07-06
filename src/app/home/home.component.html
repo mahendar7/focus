@@ -1,0 +1,42 @@
+<ngx-spinner [name]="'loading'" bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="square-loader"
+    [fullScreen]="true">
+    <p style="color: white"> Loading... </p>
+</ngx-spinner>
+
+<section>
+    <app-navbar [navOptions]="true"></app-navbar>
+    <div class="hero">
+        <div class="container">
+            <div class="hero">
+                <div class="wrapper">
+                    <div class="left">
+                        <h1>
+                            Premium video meetings. Now free for everyone.
+                        </h1>
+                        <p>
+                            We re-engineered the service we built for secure business meetings, Google Meet, to make it
+                            free and available for all.
+                        </p>
+                        <div class="btn-wrapper">
+                            <button class="login-btn" id="loginBtn" #loginBtn>
+                                <i class="fas fa-video" aria-hidden="true"></i> Start a meeting
+                            </button>
+                            <h6>or</h6>
+                            <div class="input-wrapper">
+                                <span>Enter meeting code</span>
+                                <i class="fa fa-keyboard" aria-hidden="true"></i>
+                                <input type="text" name="meetingId" id="meetingId" placeholder="Enter meeting code"
+                                    [(ngModel)]="meetingId" onmouseout="this.placeholder='Enter meeting code'">
+                            </div>
+                            <h6 [ngClass]=" meetingId ? 'hadId' : ''">join</h6>
+                        </div>
+
+                    </div>
+                    <div class=" right">
+                        <img src="../../assets/images/login-people.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

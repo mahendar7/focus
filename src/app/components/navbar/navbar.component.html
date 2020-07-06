@@ -1,0 +1,30 @@
+<nav [ngClass]="navOptions ? 'home-nav' : ''">
+    <div class="container">
+        <div class="branding" routerLink="/">
+            <div class="logo">
+                <i class="fa fa-video-camera" aria-hidden="true"></i>
+                <h1> FOCUS</h1>
+            </div>
+        </div>
+        <div *ngIf="navOptions" class="nav-list">
+            <div class="circle">
+                <!-- <h1>{{userDetails.displayName[0]}}</h1> -->
+                <img [src]="userDetails.photoURL" (click)="navClicked = !navClicked">
+            </div>
+            <div class="user-details" [ngClass]="navClicked ? 'active' : ''">
+                <div class="circle">
+                    <!-- <h1>{{userDetails.displayName[0]}}</h1> -->
+                    <img [src]="userDetails.photoURL" class="big">
+                    <div class="dot">
+                        <i class="fa fa-circle" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <h3>{{userDetails.displayName ? userDetails.displayName : 'User'}}</h3>
+                <h4>{{userDetails.email}}</h4>
+                <div class="underline">
+                    <button (click)="logoutUser()"> Sign out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
