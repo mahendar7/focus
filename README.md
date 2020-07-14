@@ -1,4 +1,4 @@
-# Focus
+# Focus (Clone of Google Meets)
 
 #Under Development
 
